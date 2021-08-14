@@ -24,7 +24,37 @@ const routes: Routes = [
       },
 
     ],
-  }  
+  } , 
+  
+  {
+    path: '',
+    component: TabPage,
+    children: [
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('../home/home.module').then(
+            (m) => m.HomePageModule
+          ),
+      },
+
+    ],},
+
+    {
+      path: '',
+      component: TabPage,
+      children: [
+        {
+          path: 'profile',
+          loadChildren: () =>
+            import('../profile/profile.module').then(
+              (m) => m.ProfilePageModule
+            ),
+        },
+  
+      ],}
+     
+   
     ];
 
 @NgModule({
