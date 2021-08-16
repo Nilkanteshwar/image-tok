@@ -23,8 +23,12 @@
     "@angular/router": "~12.1.1",
     "@ionic-native/camera": "^5.35.0",
     "@ionic-native/core": "^5.35.0",
+    "@ionic-native/file-transfer": "^5.35.0",
+    "@ionic-native/local-notifications": "^5.35.0",
     "@ionic/angular": "^5.5.2",
     "cordova-android": "9.1.0",
+    "cordova-plugin-local-notification": "^0.9.0-beta.2",
+    "cordova-plugin-wallpaper": "^0.1.1",
     "firebase": "^8.9.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
@@ -46,8 +50,11 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "4.16.1",
+    "cordova-plugin-badge": "^0.8.8",
     "cordova-plugin-camera": "^5.0.3",
     "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-file": "^6.0.2",
+    "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^4.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
@@ -72,7 +79,9 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-plugin-camera": {},
+      "cordova-plugin-camera": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
@@ -80,7 +89,9 @@
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-file-transfer": {}
     },
     "platforms": [
       "android"

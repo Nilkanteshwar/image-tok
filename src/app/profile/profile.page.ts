@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
 })
-export class ProfilePage implements OnInit {
-
+export class ProfilePage {
   constructor() { }
 
-  ngOnInit() {
-  }
+  toggleTheme(event){
+    if(event.detail.checked){
+      document.body.setAttribute('color-theme','dark');
 
-}
+    }
+    else{ document.body.setAttribute('color-theme','light');}
+
+
+  }}
+

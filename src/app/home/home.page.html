@@ -1,24 +1,28 @@
 
 
 <ion-header>
-  <ion-toolbar padding class="background" >
-    <ion-title style="text-align: center;">Raaz</ion-title>
+  <ion-toolbar  >
+    <ion-title style="text-align: center;">Upload Image</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding class="background" >
+<ion-content class="scroll-content" >
   <ion-grid>
-    <ion-row class="ion-align-self-center">
-      <ion-col size="6">
-        <ion-button (click)="takePhoto(1)">Show Camera</ion-button>
+    <ion-row >
+      <ion-col class="role">
+        <ion-icon size="large"   name="camera-outline" (click)="takePhoto(1)">Show Camera</ion-icon>
       </ion-col>
-      <ion-col size="6">
-        <ion-button (click)="takePhoto(0)">Show Album</ion-button>
+      <ion-row>
+      <ion-col  class="cole">
+        <ion-icon size="large" name="image-outline" class="k" (click)="takePhoto(0)">Show Album</ion-icon>
       </ion-col>
+      </ion-row>
     </ion-row>
+  
   </ion-grid>
   <div *ngIf="base64Image">
     <img [src]="base64Image">
-    <ion-button (click)="upload()">Upload to Firebase!</ion-button>
+    <ion-icon name="cloud-upload-outline"  size="large" 
+    (click)="upload()">Upload to Firebase!</ion-icon>
   </div>
 </ion-content>

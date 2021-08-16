@@ -18,7 +18,11 @@ export class HomePage {
 
   constructor(private camera: Camera,
     private alertCtrl: AlertController,
-    private storage: AngularFireStorage) { }
+    private storage: AngularFireStorage) {
+     }
+
+
+ 
 
   async takePhoto(sourceType: number) {
     const options: CameraOptions = {
