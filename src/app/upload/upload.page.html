@@ -1,11 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title style="text-align: center;">Raaz</ion-title>
+
+
+<ion-header >
+  <ion-toolbar >
+    <ion-title style="text-align: center;color: blue;">Heading</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div >
-<img class="fill"  src="../../assets/WhatsApp Image 2021-07-22 at 6.58.30 PM.jpeg">
-</div>
+
+
+
+
+<ion-content class="card-background-page">
+  <ion-refresher slot="fixed" (ionRefresh)=" doRefresh($event);">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let image of allImages" (click)="setwall()">
+    <img [src]="image"/>
+   
+  </ion-card>
+  
+ 
 </ion-content>

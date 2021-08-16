@@ -1,9 +1,52 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title style="align-items: center;">Profile page</ion-title>
+    <ion-toggle slot="end"
+    
+      (ionChange)='toggleTheme($event)'>
+    </ion-toggle>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content > 
+  <ion-card>
+  <h2>Welcome To Our Wallpaper App</h2>
+</ion-card>
+<a href=" https://www.instagram.com/invites/contact/?i=1xgyhqlgz92mq&utm_content=21ota4r">
+<ion-card>
+<ion-item>
+ 
+    <ion-avatar slot="start">
+      <img src="../../assets/insta.png">
+    </ion-avatar>
+    <ion-label>Follow us On Instagram</ion-label>
 
+  </ion-item>
+</ion-card>
+</a>
+<a href="https://www.facebook.com/naanpointdk/">
+  <ion-card>
+<ion-item>
+  
+  <ion-avatar slot="start">
+    <img src="../../assets/fb.png">
+  </ion-avatar>
+  <ion-label>Follow us On Facebook</ion-label>
+</ion-item>
+
+</ion-card>
+</a>
+<a href="https://play.google.com/store/apps/details?id=com.dollarapps.thankyougif">
+<ion-card>
+<ion-item>
+<ion-avatar slot="start">
+  <img src="../../assets/google-play-store.png">
+</ion-avatar>
+<ion-label>Rate Us On Playstaore⭐⭐⭐⭐⭐</ion-label>
+</ion-item>
+
+
+</ion-card></a>
 </ion-content>
